@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="Result"></div>
+    <table style="width:100%">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            
+            
+        </tr>
+        <tr>
+            <td> <input Amount="number" type="number" id="amount"/> </td>
+            <td>
+                <select name="fromCurrency">
+                    <option value="VN">Vietnam</option>
+                    <option value="USB">USD</option>
+
+                </select>
+            </td>
+            <td>
+                    <select name="toCurrency">
+                            <option value="USB">USD</option>
+                            <option value="VN">Vietnam</option>
+                    </select>
+                        
+            </td>
+                
+            <td>
+                <button type="button" id="Sum" onclick="sumnumber()" >Convert</button>
+            </td>
+        </tr>
+
+    </table>
+    <p id="demo"></p>
+    <script>
+            function sumnumber(){
+                let amount = document.getElementById("amount").value;
+                let vnd = amount*23000;
+                let usd = vnd / 23000;
+                document.getElementById("demo").innerHTML = "kết quả là: " + vnd + "vnd";
+                document.getElementById("demo").innerHTML = "kết quả là: " + usd + "usd";
+            }
+      
+
+    </script>
+</body>
+</html>
