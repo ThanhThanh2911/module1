@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh giai thua</title>
+</head>
+
+<body>
+    <script>
+        function tinhGiaiThua(number) {
+            var num = 1;
+            if (number === 0 || number === 1) {
+                return num;
+            }
+            if (number > 1) {
+                for (var i = 2; i <= number; i++) {
+                    num = num * i;
+                } return num;
+            }
+        } 
+        var giaiThua = tinhGiaiThua(5);
+        console.log(giaiThua);
+        
+    </script>
+</body>
+
+</html>
