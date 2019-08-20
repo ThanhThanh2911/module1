@@ -8,10 +8,15 @@
 </head>
 <body>
     <script>
-var x = [1,3,5];
-x[0] = x[2];
-x[1] = x[0];
-console.log(x);
+        var a = +prompt("Nhập 1 số: ")
+        function kientraNguyenDuong(a){
+            if (a>0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        console.log(kientraNguyenDuong(a));
     </script>
 </body>
 </html>
