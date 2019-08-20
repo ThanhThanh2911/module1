@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function daoMang(a) {
+            for (var i = 0; i < a.length-1; i++) {
+                for (var j = i+1; j < a.length; j++) {
+                    {
+                        let tg = a[i];
+                        a[i] = a[j];
+                        a[j] = tg;
+                    }
+                }
+            }
+            return a;
+            // for(let i = arr.length-1 ; i>=0 ;i-- ){
+            //     console.log(arr[i]);
+            // }
+        }
+        var arr = ['a', 'ư', '34', 't', '2'];
+        // console.log(daoMang(arr));
+        let array = daoMang(arr);
+        console.log(array);
+    </script>
+</body>
+
+</html>
