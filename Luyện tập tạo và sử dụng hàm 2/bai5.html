@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tìm số nhỏ nhất trong 3 số</title>
+</head>
+
+<body>
+    <script>
+        var a = +prompt("Nhập vào số thứ nhất:");
+        var b = +prompt("Nhập vào số thứ hai:");
+        var c = +prompt("Nhập vào số thứ ba:");
+        function checkMin(a, b, c) {
+            if (a>b){
+                return b>c?c:b;
+            }else{
+                return a>c?c:a;
+            }
+        }
+        console.log(checkMin(a,b,c));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tinh so ngay</title>
+</head>
+
+<body>
+
+    <h1>Tháng</h1>
+    <input type="text" id="thang">
+    <button type="button" onclick="ketqua()">Tính số ngày</button>
+    <div id="tinhsongay"></div>
+    <script>
+        function ketqua() {
+            let ketqua = document.getElementById("thang").value;
+            let tinhsongay = document.getElementById("tinhsongay");
+            switch (parseInt(ketqua)) {
+                case 1:
+                    tinhsongay.innerHTML = "Co 31 ngay"
+                    break;
+                case 2:
+                    tinhsongay.innerHTML = "Thang 2 co 28 ngay";
+                    break;
+                case 3:
+                    tinhsongay.innerHTML = "Thang 3 co 31 ngay";
+                    break;
+                case 4:
+                    tinhsongay.innerHTML = "Thang 4 co 30 ngay";
+                    break;
+                case 5:
+                    tinhsongay.innerHTML = "Thang 5 co 31 ngay";
+                    break;
+                case 6:
+                    tinhsongay.innerHTML = "Thang 6 co 30 ngay";
+                    break;
+                case 7:
+                    tinhsongay.innerHTML = "Thang 7 co 31 ngay";
+                    break;
+                case 8:
+                    tinhsongay.innerHTML = "Thang 8 co 31 ngay";
+                    break;
+                case 9:
+                    tinhsongay.innerHTML = "Thang 1 co 30 ngay";
+                    break;
+                case 10:
+                    tinhsongay.innerHTML = "Thang 10 co 31 ngay";
+                    break;
+                case 11:
+                    tinhsongay.innerHTML = "Thang 11 co 30 ngay";
+                    break;
+                case 12:
+                    tinhsongay.innerHTML = "Thang 12 co 31 ngay";
+                    break;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

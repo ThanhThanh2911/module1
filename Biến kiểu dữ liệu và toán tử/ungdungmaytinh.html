@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ứng dụng máy tính</title>
+</head>
+
+<body>
+
+    <div id="result"></div>
+
+    <h1>Caculator</h1>
+    <input name="sothunhat" type="number" id="sothunhat" />
+    <input name="sothuhai" type="number" id="sothuhai" /> <br />
+
+
+    <button value="Addition(+)" type="button" onclick="Add()">Addition(+)</button>
+    <button value="Subtraction(-)" type="button" onclick="Sub()">Subtraction(-)</button>
+    <button value="Multiplication(*)" type="button" onclick="Mul()">Multiplication(*)</button>
+    <button value="Division(/)" type="button" onclick="Div()">Division(/)</button>
+
+    <script>
+        function Add() {
+            var sothunhat = document.getElementById("sothunhat").value;
+            var sothuhai = document.getElementById("sothuhai").value;
+            document.getElementById("result").innerHTML = "Result:" + (+sothunhat + +sothuhai);
+        }
+        function Sub() {
+            var sothunhat = document.getElementById("sothunhat").value;
+            var sothuhai = document.getElementById("sothuhai").value;
+            document.getElementById("result").innerHTML = "Result:" + (+sothunhat - +sothuhai);
+        }
+        function Mul() {
+            var sothunhat = document.getElementById("sothunhat").value;
+            var sothuhai = document.getElementById("sothuhai").value;
+            document.getElementById("result").innerHTML = "Result:" + (+sothunhat * +sothuhai);
+        }
+        function Div() {
+            var sothunhat = document.getElementById("sothunhat").value;
+            var sothuhai = document.getElementById("sothuhai").value;
+            document.getElementById("result").innerHTML = "Result:" + (+sothunhat / +sothuhai);
+        }
+    </script>
+</body>
+
+</html>

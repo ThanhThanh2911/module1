@@ -7,13 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        var number = +prompt("nhap vao 1 so:");
-        function tinhBinhPhuong(number){
-            total = Math.pow(number,2);
-            return total;  
-        }tinhBinhPhuong(number);
-        alert(total);
-    </script>
+    <div id="demo"></div>
+    <button onclick="document.getElementById('demo').innerHTML = Date()">the time?</button>
 </body>
 </html>
