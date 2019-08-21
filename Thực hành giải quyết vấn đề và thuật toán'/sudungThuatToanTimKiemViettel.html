@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function checkViettel(str) {
+            RegExp = /^((09|03)+([0-9]{8}))$/;
+            for (var i = 0; i < str.length; i++) {
+                if (RegExp.test(str[i])) {
+                    console.log("Số điện thoại của bạn là số của nhà mạng Viettel" + str[i]);
+                } else {
+                    console.log("Số điện thoại của bạn không phảilà số của nhà mạng Viettel" + str[i]);
+                }
+            }
+        }
+        var array = ["0389700922", "0773084456"];
+        checkViettel(array);
+    </script>
+</body>
+
+</html>
