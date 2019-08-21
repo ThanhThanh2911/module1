@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="class">
+    <button type="button" onclick="isClass()">Check</button>
+    <script>
+        function isClass(){
+            var str = document.getElementById("class").value;
+            RegExp = /^([ACP])+([0-9]{4})+([GHIKLM])$/;
+            if (RegExp.test(str)){
+                alert("This class is true!");
+            }else{
+                alert("This class is not true!");
+            }
+        }
+        // var class1 = "C0123G";
+        // isClass(class1);
+        // var class2 = "s0123G";
+        // isClass(class2);
+        
+    </script>
+</body>
+</html>

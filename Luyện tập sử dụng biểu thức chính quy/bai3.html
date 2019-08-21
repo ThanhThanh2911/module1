@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkNguyenAm(){
+            patt = /[aieou]/;
+            var count=0;
+            for (var i=0; i<str.length; i++){
+                if (patt.test(str[i])){
+                    count++;
+                }
+            }console.log("Có "+count+ " nguyên âm trong chuỗi");
+        }
+        function checkPhuAm(){
+            patt = /[^aieou]/;
+            var count=0;
+            for (var i=0; i<str.length; i++){
+                if (patt.test(str[i])){
+                    count++;
+                }
+            }console.log("Có "+count+ " phụ âm trong chuỗi");
+        }
+        var str="ahjawhohfeowh";
+        checkNguyenAm(str);
+        checkPhuAm(str);
+    </script>
+</body>
+</html>

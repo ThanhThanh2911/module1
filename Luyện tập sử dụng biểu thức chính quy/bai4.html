@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter password</h3>
+    <input type="password" id="password">
+    <button type="button" onclick="isPassword()">Check</button>
+    <script>
+        function isPassword(str){
+            var str = document.getElementById("password").value;
+            patt = /^[a-zA-Z0-9]{8,}$/;
+            if (patt.test(str)){
+                alert("This password is true!");
+            }else{
+                alert("This password is not true!");
+            }
+        }
+        // var password1 = "093hjsfA";
+        // isPassword(password1);
+    </script>
+</body>
+</html>

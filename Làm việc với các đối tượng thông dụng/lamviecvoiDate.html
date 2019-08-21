@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Làm việc với Date</title>
+</head>
+<body>
+<script>
+       //debugger;
+       var d = new Date('1998/11/29');
+       var e = new Date('2019/08/16');
+       var year = e.getFullYear() - d.getFullYear();
+       var month = year *12 +(e.getMonth() - d.getMonth());
+       var day = year * 365 +(e.getDay() - d.getDay());
+       var hour = day * 24;
+       var minute = hour * 60;
+       var second = minute * 60;
+       console.log(" Ban song "+year+" nam");
+       console.log(" Ban song "+month+" thang");
+       console.log(" Ban song "+day+" ngay");
+       console.log(" Ban song "+hour+" gio");
+       console.log(" Ban song "+minute+" phut");
+       console.log(" Ban song "+second+" giay");
+       </script>
+
+</body>
+</html>

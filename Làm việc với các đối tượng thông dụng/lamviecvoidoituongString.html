@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Làm việc với đối tượng String</title>
+</head>
+
+<body>
+    <script>
+        //Đếm số lần xuất hiện chữ "a"
+        var txt = "Tôi yêu ngôn ngữ lập trình Javascript";
+        var result1 = 0;
+        search = /[a]/;
+        var n = txt.length ;
+        function checkA(str) {
+            debugger;
+            for (var i = 0; i < n; i++) {
+                if (search.test(str[i])) {
+                    result1 += 1;
+                }
+            } 
+            console.log(result1);
+        }
+        checkA(txt);
+        //Tách chuỗi trên vào trong một mảng các chuỗi. Mỗi từ là một phần từ.
+        var result2 = txt.split(" ");
+            console.log(result2);
+
+        //Đếm số lượng từ có trong chuỗi trên.
+        var result3 = 0;
+        var n1 = result2.length ;
+        function isNumber(str) {
+            for (var j = 0; j < n1; j++) {
+                    result3 += 1;
+            } console.log(result3);
+        }
+        isNumber(txt);
+
+        //Thay thế chữ 'Javascript' bằng chữ 'Typescript'
+        var result4 = txt.replace("Javascript", "Typescript");
+        console.log(result4);
+    </script>
+</body>
+
+</html>
