@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flash Lamp</title>
+</head>
+
+<body>
+    <script>
+        class Battery {
+            constructor(energy) {
+                this.energy = energy;
+            }
+            setEnergy(energy) {
+                this.energy = energy;
+            }
+            getEnergy() {
+                return this.energy;
+            }
+            decreaseEnergy() {
+                if (this.energy > 0) {
+                    this.energy--;
+                }
+            }
+        }
+        class FlashLamp {
+            constructor(status, battery) {
+                this.status = status;
+                this.battery = battery;
+            }
+            setBattery(battery) {
+                this.battery = battery;
+            }
+            getBatteryInfo() {
+                return this.battery.getEnergy();
+            }
+            light() {
+                if (this.status) {
+                    alert("Lighting");
+                }
+                else {
+                    alert("Not lighting")
+                }
+            }
+            turnOn() {
+                this.status = true;
+            }
+            turnOff() {
+                this.status = false;
+            }
+        }
+        let battery = new Battery(100);
+        battery.setEnergy(50);
+        battery.decreaseEnergy();
+        console.log(battery.getEnergy());
+        let flashLamp = new FlashLamp(true);
+        flashLamp.setBattery(battery);
+        console.log("Battery info:" + flashLamp.getBatteryInfo());
+        flashLamp.light();
+
+        alert("Turn on")
+        flashLamp.turnOn();
+        flashLamp.light();
+        console.log("Battery info:" + flashLamp.getBatteryInfo());
+
+        alert("Turn off")
+        flashLamp.turnOff();
+        flashLamp.light();
+
+    </script>
+</body>
+
+</html>

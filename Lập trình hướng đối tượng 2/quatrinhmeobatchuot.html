@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quá trình mèo bắt chuột và ăn chuột</title>
+</head>
+<body>
+    <script>
+        class Rat{
+            constructor(name, weight, speed, status){
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed;
+                this.status = true;
+            }
+            speak(){
+                console.log("Chit Chit");
+            }
+        }
+        class Cat{
+            constructor(name, weight, speed){
+                this.name = name;
+                this.weight = weight;
+                this.speed = speed; 
+            }
+            speak(){
+                console.log("Meo Meo");
+            }
+            canCatchRat(mouse){
+                if (this.speed > mouse.speed){                    
+                    console.log(this.name + "catch" + mouse.name);
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+            eatRat(mouse){
+                if (this.canCatchRat(mouse) && mouse.status === true){
+                    this.weight += mouse.weight;
+                    mouse.status = false;// chuot chet
+                    mouse.weight -=mouse.weight;
+                    console.log(this.name +"can eat"+ mouse.name);
+                }else{
+                    console.log(this.name +"cannot eat"+ mouse.name);
+                }
+            }
+        }
+        let rat = new Rat("Tom", 15, 50);
+        let cat = new Cat("Jerry", 30, 60);
+        console.log(rat);
+        console.log(cat);
+        cat.canCatchRat(rat);
+        cat.eatRat(rat);
+        console.log(rat);
+        console.log(cat);
+    </script>
+</body>
+</html>
