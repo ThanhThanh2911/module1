@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var myColor = ["Red", "Green", "White", "Black"];
+        //myColor.toString();
+        //document.write(myColor);
+
+        //var nhapso = +prompt("Nhap vao 1 so:");
+        //var num = nhapso.toString();
+        //var result = [num[0]];
+        //for (var i=0; i<= num.length; i++){
+            //if ((num[i] %2 === 0) && (num[i+1] %2 === 0)){
+                //result.push("-" + num[i+1]);
+                //}
+                //else{
+                  // result.push(num[i+1]);
+               // }
+         //   }
+           // document.write(result.join(''));
+
+            var inhoa='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var inthuong='abcdefghijklmnopqrstuvwxyz';
+            var cau=prompt("nhap vao 1 cau:");
+            var nhapcau=cau.toString();
+            var result = [];
+            for (var i=0; i< nhapcau.length; i++){
+                if (inhoa.includes(nhapcau[i]))
+                {
+                    result.push(nhapcau[i].toLowerCase());
+                }
+                else if (inthuong.includes(nhapcau[i])){
+                    result.push(nhapcau[i].toUpperCase());
+                }
+                else {
+                    result.push(nhapcau[i]);
+                }
+            }
+            document.write(result.join(''));
+
+    </script>
+</body>
+</html>

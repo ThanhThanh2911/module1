@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let foot = +prompt("input foot");
+
+        function footToMeter(foot){
+            var meter = 0.305 * foot;
+            return meter;
+        }
+        console.log("Foot to meter " + footToMeter(foot));
+        function meterToFoot(meter){
+            var foot = 0.305 * meter;
+            return foot;
+        }
+        console.log("Meter to foot " + meterToFoot(2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array1=[3, 5, 1, 8, -3, 7, 8];
+        var array2=[7, 12, 6, 9, 20, 56, 89];
+        var array3=[];
+        var array4=[0, 0, 0, 0, 0, 0];
+        function checkSmallest(array){
+            let index=0;
+            if (array.length == 0){
+                return -1;
+            }
+            let min = array[0];
+            for (var i=0; i<array.length; i++){
+                if (array[i]<min){
+                    min=array[i];
+                    index=i;
+                }
+            }
+            return index;
+        }
+        let min1=checkSmallest(array1);
+        console.log(min1);
+        let min2=checkSmallest(array2);
+        console.log(min2);
+        let min3=checkSmallest(array3);
+        console.log(min3);
+        let min4=checkSmallest(array4);
+        console.log(min4);
+
+    </script>
+</body>
+</html>
