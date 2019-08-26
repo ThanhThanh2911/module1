@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var arr = [12, 6, 3, 7, 21, 5, 7];
+        function tryAddFromArray(arr, value, index) {
+            if (index<0){
+                return arr;
+            }
+            for (var i = 0; i < arr.length; i++) {
+                if (index === i) {
+                    arr.splice(index, 0, value);
+                }
+            }
+            return arr;
+        }
+        var value = +prompt("Enter the value");
+        var index = +prompt("Enter the index");
+        console.log(tryAddFromArray(arr, value, index));
+    </script>
+</body>
+</html>

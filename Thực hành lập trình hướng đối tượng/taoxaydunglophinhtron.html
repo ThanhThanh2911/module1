@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100" style="border: 1px solid #000000"></canvas>
+    <script>
+        let Circel = function(x, y, radius, z, w, color){
+            this.radius=radius;
+            this.color=color;
+            this.x =x;
+            this.y=y;
+            this.z=z;
+            this.w=w;
+
+        this.getRadius = function(){
+            return radius;
+        }
+        this.getArea = function(){
+            return Math.PI*radius*radius;
+        }
+        this.draw = function(){
+            var a = document.getElementById("myCanvas");
+            var hinhTron = a.getContext("2d");
+            hinhTron.beginPath();
+            hinhTron.arc(this.x,this.y,this.radius, this.z, this.w);
+            hinhTron.fillStyle=this.color;
+            hinhTron.fill();
+        }
+        }
+        let circel1 = new Circel(95, 50, 40, 0, 2*Math.PI, "red");
+        let S = circel1.getArea();
+        let radius = circel1.getRadius();
+        console.log(radius, S );
+        circel1.draw();
+    </script>
+</body>
+</html>

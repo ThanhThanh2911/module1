@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="200px" height="200px" style="border: 1px solid floralwhite"></canvas>
+    <script>
+        let Rectangle = function (width, height, x, y) {
+            this.width = width;
+            this.height = height;
+            this.x = x;
+            this.y = y;
+
+            this.getArea = function () {
+                return width * height;
+            }
+
+            this.getCircumference = function () {
+                return (width + height) * 2;
+            }
+            this.toString = function () {
+                console.log("Chieu dai la " + this.width + "," + "Chieu rong la" + this.height);
+            }
+
+            this.draw = function () {
+                var canvas = document.getElementById("myCanvas");
+                var hinhChuNhat = canvas.getContext("2d");
+                hinhChuNhat.beginPath();
+                hinhChuNhat.fillStyle = "red";
+                hinhChuNhat.fillRect(this.x, this.y, this.width, this.height);
+            }
+        }
+
+        let rectangle1 = new Rectangle(100, 50, 0, 0);
+        rectangle1.draw();
+        console.log(rectangle1);
+        rectangle1.toString();
+        let Chuvi = rectangle1.getCircumference();
+        let Dientich = rectangle1.getArea();
+        document.write("</br>" + "Chu vi la " + Chuvi + "</br>" + "Dien tich la" + Dientich);
+        //createRectangle();
+        //rectangle1.drawRect();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var star =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe"];
+        var value =["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+        var name = prompt("input star:");
+        function checkValue(name){
+            var index = -1;
+            for (var i = 0;i <star.length; i++){
+                if (star[i] === name){
+                    index = i;
+                    return index;
+                }
+            }
+            return index;
+        }
+
+        let index = checkValue(name);
+
+        if(index !== -1) {
+            alert(value[index])
+        } else {
+            alert('ko ton tai')
+        }
+    </script>
+</body>
+</html>

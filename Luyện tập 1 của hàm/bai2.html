@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="increateNumber()">
+    <script>
+        var num = +prompt("Nhap vao 1 so");
+        var number = increateNumber(num);
+        function increateNumber(number){
+            //var number = +prompt("Nhap vao 1 so");
+            number = number +1;
+            return number;
+        }
+        document.write(number);
+        //console.log(increateNumber(2));
+    </script>
+</body>
+</html>

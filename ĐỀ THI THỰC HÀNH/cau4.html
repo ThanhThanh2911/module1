@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id= "image" src="/kisspng-image-northern-giraffe-animal-cartoon-black-and-wh-5ca7891ecd6641.9067709415544834868413.jpg" alt="The Image">
+    <canvas id="myCanvas" width="1000px" height="1000px" style="border: 1px solid #0000"></canvas>
+    <script>
+        class Animal{
+            constructor(x,y,name, width, height, image){
+                this.x=x;
+                this.y=y;
+                this.name=name;
+                this.width=width;
+                this.height=height;
+                this.image=image;
+            }
+            render(canvas){
+                var c = document.getElementById("myCanvas").getContext("2d");
+                c.drawImage(img,10,10);
+            }
+        }
+        var animal = new Animal(50,50,"giraffe", 200,100,img);
+        var img = document.getElementById("image");
+        console.log(animal);
+        animal.render();
+    </script>
+</body>
+</html>

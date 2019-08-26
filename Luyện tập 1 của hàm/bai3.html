@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body onload="value()">
+    <script>
+        var number1 = +prompt("Nhap vao so thu nhat");
+        var number2 = +prompt("Nhap vao so thu hai");
+        function value(number1,number2){
+            if (number1 > number2){
+                alert(number1 + ">" + number2);
+            }
+            else {
+                var sum = number1 + number2;
+                return sum
+            }
+        }console.log(value(number1,number2));
+    </script>
+</body>
+</html>
