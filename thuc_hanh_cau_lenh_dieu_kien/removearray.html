@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6, 7];
+        let n = +prompt("Vị trí cần xóa!");
+        let check = Number.isInteger(n);
+        if (check === true) {
+            console.log(tryRemoveFromArray(arr, n));
+        } else {
+            alert("Đầu vào bị sai!");
+        }
+        function tryRemoveFromArray(arr, n) {
+            if (n >= arr.length ||  n < 0) {
+                return arr;
+            } else {
+                arr.splice(n, 1);
+            }
+            return arr;
+        }
+    </script>
+</body>
+
+</html>

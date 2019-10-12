@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greaterY(arr, Y) {
+            let count = 0;
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] === Y) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        var Y = +prompt("nhap 1 so");
+        let arr = [5, 2, 8, 3, 3];
+        greaterY(arr, Y);
+        console.log(greaterY(arr, Y));
+    </script>
+</body>
+
+</html>

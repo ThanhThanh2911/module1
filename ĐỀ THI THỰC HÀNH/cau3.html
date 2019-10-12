@@ -11,16 +11,17 @@
 <body>
     <script>
         function inPerfectNumber(num) {
+            let check = false
             if (num < 0) {
-                return false;
+                return check;
             }
             var uocSo = 0;
-            for (var i = 0; i < num; i++) {
+            for (var i = 0; i <= num; i++) {
                 if (num % i === 0) {
                     uocSo += i;
                 }
             }
-            return uocSo === num ? true : false
+            return (uocSo / 2 === num) ? true : false;
         }
         var num = +prompt("Enter the number");
         console.log(inPerfectNumber(num));
